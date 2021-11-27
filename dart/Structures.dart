@@ -34,6 +34,10 @@ void main() {
     // list.add(1); - causes endless loop, because list length is increasing
   }
 
+  for (var el in list) {  // Another type of for-loop.
+    print("Element: ${el}");
+  }
+
   print("List with different variables: ${list}");
   print("List as map: ${list.asMap()}");
 
@@ -55,13 +59,13 @@ void main() {
   // Map is a collection with elements that can be found by keys.
 
   Map<String, dynamic> profile = {
-    "name": "Evgeny",
+    "name": "Elizabeth",
     "age": 18,
     "average_mark": 8.32342,
   };
   print("Dynamic map: ${profile}");
 
-  Map<String, String> profileWithStrings = {"name": "Evgeny", "age": "18"};
+  Map<String, String> profileWithStrings = {"name": "Kate", "age": "18"};
   print("Map with strings only: ${profileWithStrings}");
 
   for (var entry in profile.entries) {

@@ -89,6 +89,11 @@ void main() {
     int5--;
   }
 
+  int int6 = 10;
+  do {
+    int6++;
+  } while (int6 != 15);
+
   for (int i = 0; i < 9; i++) {
     str3 += "a";
   }
