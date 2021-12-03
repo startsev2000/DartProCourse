@@ -9,10 +9,10 @@ bool isNegative(num number) {
 // A way to write function without return.
 bool isPositive(num number) => number > 0;
 
-// Example of method with parameters specified.
-// required - you are obliged to give value of parameter.
-// var? - this can be null
-// var variable = "value" - value that will be default in the method
+/// Example of method with parameters specified.
+/// required - you are obliged to give value of parameter.
+/// var? - this can be null
+/// var variable = "value" - value that will be default in the method
 Map<String, dynamic> convertProfileInfoToMap(
     {required String name, int? age, String university = "Stanford"}) {
   Map<String, dynamic> profileInfo = {
@@ -40,6 +40,7 @@ Function getProfileInfo = (Map<String, dynamic> map) => map.forEach((key, value)
 void outputInteger(var data) {
   if (data.runtimeType is int) {
     print(data);
+    return;
   }
   throw new ArgumentError("Data is not \"int\" type");
 }
@@ -47,4 +48,5 @@ void outputInteger(var data) {
 void main() {
   print(isNegative(-321));
   print(isPositive(432));
+  outputInteger("sa"); // This will throw an exception.
 }
