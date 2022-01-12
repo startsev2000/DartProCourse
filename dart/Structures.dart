@@ -11,7 +11,7 @@ void main() {
 
   List<String> listOfStrings = new List.empty(growable: true);
   for (int i = 0; i < 5; i++) {
-    listOfStrings.add("hui");
+    listOfStrings.add("list");
   }
   print("List of strings: ${listOfStrings}");
 
@@ -25,7 +25,7 @@ void main() {
         list[i] = 1;
         break;
       case 2:
-        list[i] = "hui";
+        list[i] = "list";
         break;
       default:
         list[i] = 3.1415;
@@ -45,7 +45,7 @@ void main() {
   // Set is a collection of unique objects.
 
   Set<int> setOfInts = new Set.of({1, 2, 3});
-  Set<String> setOfStrings = new Set.from({"Hui", "Blyat", "Pizdec", "Hui"});
+  Set<String> setOfStrings = new Set.from({"list", "set", "map", "dictionary"});
 
   print("Set of integers: ${setOfInts}");
   print("Set of strings: ${setOfStrings}");
