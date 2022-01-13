@@ -33,9 +33,10 @@ Map<String, dynamic> setProfileInfo(String name, String surname,
   return profileInfo;
 }
 
-Function getProfileInfo = (Map<String, dynamic> map) => map.forEach((key, value) {
-      print("${key}: ${value}");
-    });
+Function getProfileInfo =
+    (Map<String, dynamic> map) => map.forEach((key, value) {
+          print("${key}: ${value}");
+        });
 
 void outputInteger(var data) {
   if (data.runtimeType is int) {
