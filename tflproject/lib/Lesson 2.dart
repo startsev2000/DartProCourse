@@ -25,14 +25,26 @@ class ConstantWidget extends StatelessWidget {
         title: const Text("Test application"),
         backgroundColor: Colors.amber,
       ),
-      body: const Center(
-        child: Text(
-          "Hello, world!",
-          style: TextStyle(
-            fontSize: 16.0,
-            color: Colors.purple,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          const Text(
+            "Hello world!",
+            style: TextStyle(
+              color: Colors.green,
+              fontSize: 16.0,
+              fontStyle: FontStyle.italic,
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              height: 50.0,
+              color: Colors.red,
+            ),
+          ),
+        ],
       ),
       endDrawer: Drawer(
         child: Container(

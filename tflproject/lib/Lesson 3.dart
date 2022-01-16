@@ -15,12 +15,14 @@ class _ThirdLessonState extends State<ThirdLesson> {
         title: const Text("Lesson 3"),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        // Pay attention to flexible and expanded widget below.
         children: <Widget>[
           const Center(child: Text("Centered text widget"),),
           Container(
             height: 50.0,
-            width: 50.0,
-            decoration: const BoxDecoration(),
+            width: 150.0,
             padding: const EdgeInsets.all(5.0),
             margin: const EdgeInsets.all(5.0),
             color: Colors.blue,
@@ -40,7 +42,8 @@ class _ThirdLessonState extends State<ThirdLesson> {
             ],
           ),
           Wrap(),
-          Expanded(child: Container()),
+          Expanded(child: Container(color: Colors.red,),),
+          Flexible(child: Container(color: Colors.purple,),),
         ],
       ),
     );
