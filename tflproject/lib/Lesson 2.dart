@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:io' show Platform;
 
 class ChangingWidget extends StatefulWidget {
   const ChangingWidget({Key? key}) : super(key: key);
@@ -15,7 +16,11 @@ class _ChangingWidgetState extends State<ChangingWidget> {
 }
 
 class ConstantWidget extends StatelessWidget {
-  const ConstantWidget({Key? key}) : super(key: key);
+  ConstantWidget({Key? key}) : super(key: key);
+
+  bool android = Platform.isAndroid;
+  bool ios = Platform.isIOS;
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +37,7 @@ class ConstantWidget extends StatelessWidget {
           const Text(
             "Hello world!",
             style: TextStyle(
-              color: Colors.green,
+              color: Colors.black,
               fontSize: 16.0,
               fontStyle: FontStyle.italic,
             ),
@@ -41,7 +46,7 @@ class ConstantWidget extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Container(
               height: 50.0,
-              color: Colors.red,
+              color: Colors.deepPurpleAccent,
             ),
           ),
         ],
@@ -49,23 +54,25 @@ class ConstantWidget extends StatelessWidget {
       endDrawer: Drawer(
         child: Container(
           height: 50.0,
-          color: Colors.red,
+          color: const Color(0xFF202020),
+          child: const Center(child: Text("Hello, drawer!")),
         ),
+        elevation: 10.0,
       ),
       bottomSheet: BottomAppBar(
         elevation: 2.0,
         child: Container(
           height: 40.0,
-          color: Colors.red,
+          color: Colors.purple,
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        fixedColor: Colors.red,
+        fixedColor: Colors.teal,
         currentIndex: 1,
         items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.add), label: "Add"),
-          BottomNavigationBarItem(icon: Icon(Icons.delete), label: "Delete"),
+          BottomNavigationBarItem(icon: Icon(Icons.add), label: "Add",),
+          BottomNavigationBarItem(icon: Icon(Icons.delete), label: "Delete",),
           BottomNavigationBarItem(
               icon: Icon(Icons.forward), label: "Forward"),
         ],

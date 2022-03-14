@@ -16,13 +16,13 @@ class User {
 
   String get firstName => _firstName;
 
-  String get lastName => _lastName;
+  //String get lastName => _lastName;
 
   int get points => _points;
 
-  set lastName(String value) {
-    _lastName = value;
-  }
+  //set lastName(String value) {
+  //  _lastName = value;
+  //}
 
   set firstName(String value) {
     _firstName = value;
@@ -34,7 +34,7 @@ class User {
 
   @override
   String toString() {
-    return "username: ${userName}, name: ${firstName}, last name: ${lastName}";
+    return "username: ${userName}, name: ${firstName}, last name: ${_lastName}";
   }
 
   void logOut() {
@@ -77,4 +77,9 @@ class Admin extends User with AdminOpportunities {
 mixin AdminOpportunities {
   bool canGivePoints = true;
   void givePoints(User user, int points);
+}
+
+void main() {
+  User user = new User(55, "username", "firstname", "lastname");
+  print(user._lastName);
 }
